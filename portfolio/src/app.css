@@ -1,0 +1,61 @@
+@import 'tailwindcss';
+
+@layer base {
+  :root {
+    --color-bg: #f9fafb;
+    --color-surface: #ffffff;
+    --color-border: #e5e7eb;
+    --color-text: #111827;
+    --color-muted: #6b7280;
+    --color-accent: #6366f1;
+    --color-accent-dim: #eef2ff;
+
+    --font-sans: 'Inter', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  }
+
+  [data-theme='dark'] {
+    --color-bg: #0f172a;
+    --color-surface: #1e293b;
+    --color-border: #334155;
+    --color-text: #f1f5f9;
+    --color-muted: #94a3b8;
+    --color-accent: #818cf8;
+    --color-accent-dim: #1e1b4b;
+  }
+
+  html {
+    font-family: var(--font-sans);
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    scroll-behavior: smooth;
+  }
+
+  body {
+    min-height: 100vh;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    transition: background-color 0.2s, color 0.2s;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer utilities {
+  .bg-site { background-color: var(--color-bg); }
+  .bg-surface { background-color: var(--color-surface); }
+  .border-site { border-color: var(--color-border); }
+  .text-site { color: var(--color-text); }
+  .text-muted { color: var(--color-muted); }
+  .text-accent { color: var(--color-accent); }
+  .bg-accent { background-color: var(--color-accent); }
+  .bg-accent-dim { background-color: var(--color-accent-dim); }
+  .border-accent { border-color: var(--color-accent); }
+  .font-mono { font-family: var(--font-mono); }
+}
