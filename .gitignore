@@ -1,0 +1,12 @@
+# Portfolio build artifacts and dependencies
+portfolio/node_modules/
+portfolio/build/
+portfolio/.svelte-kit/
+portfolio/.env
+portfolio/.env.*
+!portfolio/.env.example
+portfolio/package-lock.json
+
+# OS
+.DS_Store
+Thumbs.db
